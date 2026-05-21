@@ -276,3 +276,147 @@ body {
     font-size: 15px;
   }
 }
+
+.logo {
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.08);
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .conteudo {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .lista-produtos {
+    grid-template-columns: 1fr;
+  }
+
+  .logo {
+    font-size: 32px;
+    text-align: center;
+  }
+}
+/* MELHORIAS MOBILE */
+
+@media (max-width: 768px) {
+
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px 15px;
+  }
+
+  .logo {
+    font-size: 38px;
+  }
+
+  .sidebar {
+    display: flex;
+
+    flex-wrap: nowrap;
+
+    overflow-x: auto;
+
+    gap: 10px;
+
+    padding: 15px;
+
+    scrollbar-width: none;
+  }
+
+  .sidebar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .sidebar h2 {
+    display: none;
+  }
+
+  .sidebar button {
+    min-width: 180px;
+
+    white-space: nowrap;
+
+    margin: 0;
+  }
+
+  .conteudo {
+    padding: 15px;
+  }
+
+  .pesquisa {
+    width: 100%;
+  }
+
+  .lista-produtos {
+    justify-content: center;
+  }
+
+  .card-produto {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .imagem-produto {
+    height: 220px;
+  }
+}
+
+.botao-topo {
+  position: fixed;
+
+  bottom: 20px;
+  right: 20px;
+
+  width: 55px;
+  height: 55px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #111;
+
+  color: white;
+
+  font-size: 24px;
+
+  cursor: pointer;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+
+  transition: 0.3s;
+
+  z-index: 1000;
+}
+
+.botao-topo:hover {
+  transform: scale(1.1);
+
+  background: #25d366;
+}
